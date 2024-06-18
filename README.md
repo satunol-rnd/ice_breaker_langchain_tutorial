@@ -34,6 +34,11 @@
     - add configuration -> "envFile": "${workspaceFolder}/.env"
     - put a name and done!
 10. You can now run/debug using button with .env loaded
+11. To load environtment variable dynamically in program, install bellow package:
+```cmd
+    pipenv install python-dotenv
+```
+12. Now if you run ```python ice_breaker.py```, you will get .env loaded
 
 <br><br>
 
