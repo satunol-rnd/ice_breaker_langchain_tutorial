@@ -44,6 +44,18 @@
 
 <br><br>
 
+# LinkedIn Scraping
+
+## Setup API Key 
+
+The project use external data scrpper from `proxcurl.com`, which requires an API key. You can get your API key [here](https://proxcurl.com/). Put your API key in the file `.env` as `PROXYCURL_API_KEY`. The free tier will get only 10-14 request calls so be wise to use your own API key. The project also has mock data for testing purpose if api key is not provided.
+```python
+#thirdparty/linkedin.py
+def scrape_linkedin_profile(linkedin_profile_url: str, mock: bool = False):
+    ...
+```
+<br><br>
+
 # About LangChain 🦜️🔗
 
 ## What Is LangChain ?
@@ -104,3 +116,4 @@ LLM stands for "Large Language Model." These are advanced artificial intelligenc
 ## Working with LLMs
 
 When working with LLMs, developers often use APIs provided by organizations like OpenAI, Google, or Hugging Face. These APIs allow easy integration of LLM capabilities into applications without needing to manage the underlying model infrastructure.
+
