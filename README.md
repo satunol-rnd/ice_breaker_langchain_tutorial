@@ -40,6 +40,7 @@
     pipenv install python-dotenv
 ```
 12. Now if you run ```python ice_breaker.py```, you will get .env loaded
+13. rename and asign value of .env.example to .env
 
 <br><br>
 
