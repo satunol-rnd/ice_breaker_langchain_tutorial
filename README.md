@@ -41,19 +41,29 @@
 ```
 12. Now if you run ```python ice_breaker.py```, you will get .env loaded
 13. rename and asign value of .env.example to .env
+14. Intall langchain-community which contains third-party integrations that implement the base interfaces defined in LangChain Core:
+```cmd
+    pipenv install langchain-community
+    pipenv install langchainhub
+```
 
 <br><br>
 
-# LinkedIn Scraping
+# Setup third-party API Key 
 
-## Setup API Key 
+## LinkedIn Scraping
 
-The project use external data scrpper from `proxcurl.com`, which requires an API key. You can get your API key [here](https://proxcurl.com/). Put your API key in the file `.env` as `PROXYCURL_API_KEY`. The free tier will get only 10-14 request calls so be wise to use your own API key. The project also has mock data for testing purpose if api key is not provided.
+The project use external data scrapper from `proxcurl.com`, which requires an API key. You can get your API key [here](https://proxcurl.com/). Put your API key in the file `.env` as `PROXYCURL_API_KEY`. The free tier will get only 10-14 request calls so be wise to use your own API key. The project also has mock data for testing purpose if api key is not provided.
 ```python
 #thirdparty/linkedin.py
 def scrape_linkedin_profile(linkedin_profile_url: str, mock: bool = False):
     ...
 ```
+
+## Search Tool (Tavily)
+
+The project use external search engine to search linkedin link by give user name which requires an API key. You can get your API key [here](https://app.tavily.com/). Put your API key in the file `.env` as `TAVILY_API_KEY`.
+
 <br><br>
 
 # About LangChain 🦜️🔗
