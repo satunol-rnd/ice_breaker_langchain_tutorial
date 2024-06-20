@@ -14,6 +14,7 @@ from langchain import hub
 
 
 def lookup(name: str) -> str:
+    """Lookup name and get profile URL"""
     if not ("Linkedin" in name or "linkedin" in name or "LinkedIn" in name):
         name += " LinkedIn"
 
@@ -22,7 +23,8 @@ def lookup(name: str) -> str:
         model_name="gpt-3.5-turbo",
     )
     template = """given the full name {name_of_person} I want you to get it me a link to their Linkedin profile page.
-                              Your answer should contain only a URL"""
+    Your answer should contain only a URL"""
+    
     print("prompt: ", template)
     prompt_template = PromptTemplate(
         template=template, input_variables=["name_of_person"]
